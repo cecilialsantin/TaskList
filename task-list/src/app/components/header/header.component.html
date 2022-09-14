@@ -1,9 +1,10 @@
 <header>
     <h1>{{title}}</h1>
     <app-button 
-    color="#CCD5AE" 
-    text="Add Task"
+    color="{{showAddTask? '#CCD5AE' : 'green'}}" 
+    text="{{showAddTask? 'Close Task' : 'Add Task'}}"
     text-color="black"
     (btnClick)="toggleAddTask()"
+    *ngif="hasRoute('/')"
     ></app-button>
 </header>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { TaskService } from '../../service/task.service';
-import {Task} from '../../Task';
+import { Task } from '../../Task';
 
 
 @Component({
@@ -9,7 +10,7 @@ import {Task} from '../../Task';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks:Task[]=[];
+  tasks:Task[]=[]
 
 
   constructor(
@@ -19,7 +20,22 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
    this.taskService.getTasks().subscribe((tasks)=> {
     this.tasks = tasks;
-   })
+  })
+}
+deleteTask(task:Task){
+  this.taskService.deleteTask(task).subscribe(()=>{
+    this.tasks = this.tasks.filter((t) => t.id !== task.id)
+  })
+}
+
+toggleReminder(task: Task){
+  task.reminder = !task.reminder
+  this.taskService.updateTaskReminder(task).subscribe();
+}
+
+addTask(task:Task){
+  this.taskService.addTask(task).subscribe(()=>{
+    this.tasks.push(task);})
 }
 }
 

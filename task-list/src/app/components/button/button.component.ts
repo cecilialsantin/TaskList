@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import { TitleStrategy } from '@angular/router';
+
 
 @Component({
   selector: 'app-button',

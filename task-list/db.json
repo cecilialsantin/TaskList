@@ -1,35 +1,3 @@
 {
-    "tasks":[
-        {
-            "id": 1,
-            "text": "Terminar primer módulo de Angular",
-            "day": "Agosto 5 a la 12:00",
-            "reminder": true
-        },
-        {
-            "id": 2,
-            "text": "Terminar segundo módulo de Angular",
-            "day": "Agosto 30 a la 12:00",
-            "reminder": true
-        },
-        {
-            "id": 3,
-            "text": "Leer un libro",
-            "day": "Septiembre 15 a la 10:00",
-            "reminder": false
-        },
-        {
-            "id": 4,
-            "text": "Estudiar backend",
-            "day": "Octubre 10 a la 17:00",
-            "reminder": false
-        }
-        ,
-        {
-            "id": 5,
-            "text": "Entregar Proyecto Botanica",
-            "day": "Octubre 20 a la 24:00",
-            "reminder": false
-        }
-    ]
+  "tasks": []
 }
